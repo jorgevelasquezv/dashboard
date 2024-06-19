@@ -6,7 +6,7 @@ import { switchMap } from 'rxjs';
 
 import { UsersService } from '@services/users.service';
 import { TitleComponent } from '@shared/title/title.component';
-import { User } from '@interfaces/request-response';
+import { User } from '@interfaces/request-response.interface';
 
 @Component({
   standalone: true,
