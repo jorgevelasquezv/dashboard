@@ -1,0 +1,22 @@
+<app-title title="User Profile {{fullName()}}" withShadow />
+
+<section>
+  @if (user()) {
+
+  <div class="flex items-center">
+    <img
+      [srcset]="user()?.avatar"
+      [alt]="user()?.first_name"
+      class="rounded w-14"
+    />
+    <h2 class="text-2xl ml-5">
+      {{fullName()}}
+    </h2>
+  </div>
+  <div class="mt-5">
+    <h3 class="text-xl">Email: {{ user()?.email }}</h3>
+  </div>
+  }@else {
+  <h3>Please Wait...</h3>
+  }
+</section>

@@ -1,0 +1,14 @@
+<app-title title="User List" withShadow />
+
+<ul>
+  @for (user of usersService.users(); track $index) {
+  <li class="flex items-center my-2 cursor-pointer">
+    <img [srcset]="user.avatar" [alt]="user.first_name" class="rounded w-14" />
+    <a [routerLink]="['/dashboard/user', user.id]" class="mx-5 hover:underline">
+      {{ user.first_name }} {{ user.last_name }}
+    </a>
+  </li>
+  }@empty {
+  <h3>Please Wait...</h3>
+  }
+</ul>
