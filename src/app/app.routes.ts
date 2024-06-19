@@ -45,13 +45,29 @@ export const routes: Routes = [
         path: 'view-transition-1',
         title: 'View Transition 1',
         loadComponent: () =>
-          import('./dashboard/pages/view-transition/view-transition-1.component'),
+          import(
+            './dashboard/pages/view-transition/view-transition-1.component'
+          ),
       },
       {
         path: 'view-transition-2',
         title: 'View Transition 2',
         loadComponent: () =>
-          import('./dashboard/pages/view-transition/view-transition-2.component'),
+          import(
+            './dashboard/pages/view-transition/view-transition-2.component'
+          ),
+      },
+      {
+        path: 'input-output',
+        title: 'Input Output',
+        loadComponent: () =>
+          import('./dashboard/pages/input-output/input-output.component'),
+      },
+      {
+        path: 'material',
+        title: 'Angular Material',
+        loadComponent: () =>
+          import('./dashboard/pages/material/material.component'),
       },
       {
         path: '',

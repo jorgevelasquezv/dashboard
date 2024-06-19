@@ -2,7 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, computed, inject, signal } from '@angular/core';
 import { Observable, delay, map } from 'rxjs';
 
-import { User, UserResponse, UsersResponse } from '@interfaces/request-response';
+import {
+  User,
+  UserResponse,
+  UsersResponse,
+} from '@interfaces/request-response.interface';
 
 interface State {
   users: User[];
